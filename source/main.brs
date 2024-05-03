@@ -11,6 +11,7 @@ sub Main(args as Dynamic)
     'sendEventToGoogleAnalytics("key", "event")
     m.global.AddField("GoogleAnalytics", "string", false)
     m.global.observeField("GoogleAnalytics",m.port)
+    scene.signalBeacon("AppLaunchComplete")
     while(true)
         msg = wait(0, m.port)
 	       msgType = type(msg)
@@ -19,13 +20,17 @@ sub Main(args as Dynamic)
         else if msgType = "roSGNodeEvent" then
             eventCategory = msg.GetData()
             sendEventToGoogleAnalytics(eventCategory)
+        else if msgType = "roInputEvent" 'RBMN-15294: inner deeplinking (in the app);
+            deeplinkParams = msg.getInfo()
+            parseDeeplinkingParams(deeplinkParams)
         end if
     end while
+end sub
+sub parseDeeplinkingParams(args as Object)
 end sub
 
 sub GoogleAnalyticsTrigger(event)
     eventCategory = event.GetData()
-    stop
     sendEventToGoogleAnalytics(eventCategory)
 end sub
 
