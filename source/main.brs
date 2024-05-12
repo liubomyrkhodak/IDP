@@ -11,6 +11,16 @@ sub Main(args as Dynamic)
     'sendEventToGoogleAnalytics("key", "event")
     m.global.AddField("GoogleAnalytics", "string", false)
     m.global.observeField("GoogleAnalytics",m.port)
+    m.global.addField("RSG_analytics", "node", false)
+    m.global.RSG_analytics = CreateObject("roSGNode", "Roku_Analytics:AnalyticsNode")
+    
+    ' Initialize Google Analytics parameters
+    m.global.RSG_analytics.init = {
+        ga4: {
+            api_secret: "kxydEJo-Qtesdg7cILggAQ",
+            measurement_id: "G-0N84FWSYBT"
+        }
+    }
     scene.signalBeacon("AppLaunchComplete")
     while(true)
         msg = wait(0, m.port)
@@ -36,16 +46,6 @@ end sub
 
 function sendEventToGoogleAnalytics(eventCategory as String, eventAction = "action" as String, eventLabel = "" as String , eventValue = "" as String)
     ' Initialize the Roku Analytics Component Library (RACL)
-    m.global.addField("RSG_analytics", "node", false)
-    m.global.RSG_analytics = CreateObject("roSGNode", "Roku_Analytics:AnalyticsNode")
-    
-    ' Initialize Google Analytics parameters
-    m.global.RSG_analytics.init = {
-        ga4: {
-            api_secret: "kxydEJo-Qtesdg7cILggAQ",
-            measurement_id: "G-0N84FWSYBT"
-        }
-    }
     
     ' Construct the event parameters
     eventParams = {
