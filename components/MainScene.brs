@@ -52,10 +52,58 @@ sub init()
     m.itemSelected = invalid
     m.clearTokenReq = false
     m.devAPIKey = "DEV API KEY GOES HERE"
+    m.top.observeField("event","GoogleAnalyticsTrigger")
 
     ' check and see if any previous purchases have been made
     m.store.command = "getPurchases"
+    m.top.RSG_analytics = CreateObject("roSGNode", "Roku_Analytics:AnalyticsNode")
+    
+    ' Initialize Google Analytics parameters
+    m.top.RSG_analytics.init = {
+        ga4: {
+            api_secret: "kxydEJo-Qtesdg7cILggAQ",
+            measurement_id: "G-0N84FWSYBT"
+        }
+    }
 end sub
+
+sub GoogleAnalyticsTrigger(event)
+    ?"GoogleAnalyticsTrigger"
+    eventCategory = event.GetData()
+    sendEventToGoogleAnalytics(eventCategory)
+end sub
+
+function sendEventToGoogleAnalytics(eventCategory as String, eventAction = "action" as String, eventLabel = "" as String , eventValue = "" as String)
+    ?"sendEventToGoogleAnalytics"
+    ' Initialize the Roku Analytics Component Library (RACL)
+    
+    ' Construct the event parameters
+    eventParams = {
+        GA4: {
+            events: [
+                {
+                    name: eventCategory,
+                    params: {
+                        action: eventAction
+                    }
+                }
+            ]
+        }
+    }
+    
+    ' Add optional event label if provided
+    if eventLabel <> invalid then
+        eventParams.GA4.events[0].params.label = eventLabel
+    end if
+    
+    ' Add optional event value if provided
+    if eventValue <> invalid then
+        eventParams.GA4.events[0].params.value = eventValue
+    end if
+    
+    ' Send the event to Google Analytics
+    m.top.RSG_analytics.trackEvent = eventParams
+end function
 
 function onGetPurchases() as Void
     ?"> onGetPurchases"

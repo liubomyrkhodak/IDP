@@ -9,6 +9,8 @@
 
     <interface>
         <field id="response" type="assocarray" />
+        <field id="RSG_analytics" type="node" />
+        <field id="event" type="string" />
     </interface>
 
     <children>
