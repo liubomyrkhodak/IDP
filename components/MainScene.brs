@@ -303,7 +303,7 @@ function validateInactiveRokuSub(msg as Object)
     ? "> dev access tok: " tok
 
     ' validate purchaser access token and publisher system entitlement
-    if (tok <> "invalid")
+    if true'(tok <> "invalid")
         'if ((tok = m.publisherAccessToken) and (m.publisherEntitlement = "true"))
             ? "device has valid access token and entitlement in publisher system"
             grantAccess()
