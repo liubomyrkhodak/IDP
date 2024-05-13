@@ -583,11 +583,11 @@ function onStoreChannelCredData() as void
         print "- status: " m.store.storeChannelCredDataStatus.status
     end if
     ' Grant access to the user'
-    if m.clearTokenReq = true
-        m.clearTokenReq = false
-    else
+    ' if m.clearTokenReq = true
+    '     m.clearTokenReq = false
+    ' else
         grantAccess()
-    end if
+    ' end if
 end function
 
 sub dismissdialog()
