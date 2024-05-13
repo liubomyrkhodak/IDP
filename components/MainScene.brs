@@ -52,7 +52,6 @@ sub init()
     m.itemSelected = invalid
     m.clearTokenReq = false
     m.devAPIKey = "DEV API KEY GOES HERE"
-    m.top.observeField("event","GoogleAnalyticsTrigger")
 
     ' check and see if any previous purchases have been made
     m.store.command = "getPurchases"
@@ -65,12 +64,6 @@ sub init()
             measurement_id: "G-0N84FWSYBT"
         }
     }
-end sub
-
-sub GoogleAnalyticsTrigger(event)
-    ?"GoogleAnalyticsTrigger"
-    eventCategory = event.GetData()
-    sendEventToGoogleAnalytics(eventCategory)
 end sub
 
 function sendEventToGoogleAnalytics(eventCategory as String, eventAction = "action" as String, eventLabel = "" as String , eventValue = "" as String)

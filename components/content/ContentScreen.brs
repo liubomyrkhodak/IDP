@@ -155,7 +155,7 @@ end Function
 
 Function onKeyEvent(key as String, press as Boolean) as Boolean  'Maps back button to leave video
     if press
-      m.top.getParent().event = key
+      m.top.getParent().callfunc("sendEventToGoogleAnalytics",key)' .event = key
         if key = "back"  'If the back button is pressed
             if m.Video.visible
                 returnToUIPage()
