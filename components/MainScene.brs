@@ -147,6 +147,13 @@ function onGetCatalog() as void
             end if
 
         end for
+        
+        if count = 0 then
+            productData = data.CreateChild("ChannelStoreProductData")
+            productData.productName = "name"
+            productData.productPrice = "Billion"
+            productData.productBought = false
+        end if
         m.productGrid.content = data
     end if
     if m.init
@@ -287,7 +294,8 @@ function createOrder() as void
   itemPurchased.addFields({ "code": m.itemSelected.productCode, "name": m.itemSelected.productName, "qty": 1})
   m.store.order = myOrder
   ? "processing order ..."
-  m.store.command = "doOrder"
+  m.orderStatus = "confirm"
+  writeAccessToken()
 end function
 
 function validateInactiveRokuSub(msg as Object)
@@ -296,7 +304,7 @@ function validateInactiveRokuSub(msg as Object)
     ? "> dev access tok: " tok
 
     ' validate purchaser access token and publisher system entitlement
-    if true'(tok <> "invalid")
+    if (tok <> "invalid")
         'if ((tok = m.publisherAccessToken) and (m.publisherEntitlement = "true"))
             ? "device has valid access token and entitlement in publisher system"
             grantAccess()
@@ -492,6 +500,10 @@ function isLinkedEmail(msg as Object)
 end function
 
 function onOrderStatus(msg as Object)
+    if msg = "confirm" then 
+        writeAccessToken()
+        return 0
+    end if
     status = msg.getData().status
     if status = 1 ' order success
         ? "> order success"
