@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="StoreProduct" extends="Group">
+
+<interface>
+  <field id="itemContent" type="node" onChange="itemContentChanged"/>
+</interface>
+
+<script type="text/brightscript" >
+<![CDATA[
+  sub itemContentChanged()
+    itemData = m.top.itemContent
+    m.productName.text = itemData.productName
+    m.productPrice.text = itemData.productPrice
+    m.freeTrialType.text = itemData.freeTrialType
+    m.productType.text = itemData.productType
+  end sub
+
+  sub init()
+    m.productName = m.top.findNode("productName")
+    m.productPrice = m.top.findNode("productPrice")
+    m.freeTrialType = m.top.findNode("freeTrialType")
+    m.productType = m.top.findNode("productType")
+  end sub
+]]>
+</script>
+
+<children>
+<LayoutGroup layoutDirection="vert" vertAlignment="top" itemSpacings="30" >
+    <LayoutGroup layoutDirection="horiz" horizAlignment="center" itemSpacings="[15]">
+        <Label color="#ffffff" font="font:SmallSystemFont" text="Product:" />
+        <Label id="productName" color="#ffffff" font="font:SmallSystemFont" />
+	</LayoutGroup>
+    <LayoutGroup layoutDirection="horiz" horizAlignment="center" itemSpacings="[15]">
+        <Label color="#ffffff" font="font:SmallSystemFont" text="Price:" />
+        <Label id="productPrice" color="#ffffff" font="font:SmallSystemFont" />
+	</LayoutGroup>
+    <LayoutGroup layoutDirection="horiz" horizAlignment="center" itemSpacings="[15]">
+        <Label color="#ffffff" font="font:SmallSystemFont" text="TrialType:" />
+        <Label id="freeTrialType" color="#ffffff" font="font:SmallSystemFont" />
+	</LayoutGroup>
+    <LayoutGroup layoutDirection="horiz" horizAlignment="center" itemSpacings="[15]">
+        <Label color="#ffffff" font="font:SmallSystemFont" text="Type:" />
+        <Label id="productType" color="#ffffff" font="font:SmallSystemFont" />
+	</LayoutGroup>
+</LayoutGroup>
+
+</children>
+
+</component>

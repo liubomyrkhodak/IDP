@@ -1,0 +1,89 @@
+<result xmlns="http://api.roku.com/products" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+
+    <errorCode i:nil="true" xmlns=""/>
+    <errorDetails i:nil="true" xmlns=""/>
+    <errorMessage xmlns=""/>
+    <status xmlns="">Success</status>
+    <products>
+        <product xmlns="">
+            <HDPosterUrl i:nil="true"/>
+            <SDPosterUrl i:nil="true"/>
+            <code>roku.amcplus.member.month7dt</code>
+            <cost>$8.99</cost>
+            <description/>
+            <expirationDate i:nil="true"/>
+            <freeTrialQuantity>7</freeTrialQuantity>
+            <freeTrialType>Days</freeTrialType>
+            <fulfills xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+            <inStock>true</inStock>
+            <maxQty>1</maxQty>
+            <name>Monthly Subscription</name>
+            <productType>MonthlySub</productType>
+            <purchaseDate>0001-01-01T00:00:00</purchaseDate>
+            <purchaseId>98034275ryhuwdg9348yrhpfuh4398p7rwyfh9p732qrfgp983gwfeigu</purchaseId>
+            <qty>1</qty>
+            <renewalDate i:nil="true"/>
+            <upsellProduct i:nil="true"/>
+        </product>
+        <product xmlns="">
+            <HDPosterUrl i:nil="true"/>
+            <SDPosterUrl i:nil="true"/>
+            <code>roku.amcplus.member.annual7dt</code>
+            <cost>$83.99</cost>
+            <description/>
+            <expirationDate i:nil="true"/>
+            <freeTrialQuantity>7</freeTrialQuantity>
+            <freeTrialType>Days</freeTrialType>
+            <fulfills xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+            <inStock>true</inStock>
+            <maxQty>1</maxQty>
+            <name>Annual Subscription</name>
+            <productType>AnnualSub</productType>
+            <purchaseDate>0001-01-01T00:00:00</purchaseDate>
+            <purchaseId>98034275ryhuwdg9348yrhpfuh4398p7rwyfh9p732qrfgp983gwfeigu</purchaseId>
+            <qty>1</qty>
+            <renewalDate i:nil="true"/>
+            <upsellProduct i:nil="true"/>
+        </product>
+        <product xmlns="">
+            <HDPosterUrl i:nil="true"/>
+            <SDPosterUrl i:nil="true"/>
+            <code>roku.amcplus.member.month</code>
+            <cost>$8.99</cost>
+            <description/>
+            <expirationDate i:nil="true"/>
+            <freeTrialQuantity>7</freeTrialQuantity>
+            <freeTrialType>Days</freeTrialType>
+            <fulfills xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+            <inStock>true</inStock>
+            <maxQty>1</maxQty>
+            <name>Monthly Subscription</name>
+            <productType>MonthlySub</productType>
+            <purchaseDate>0001-01-01T00:00:00</purchaseDate>
+            <purchaseId>98034275ryhuwdg9348yrhpfuh4398p7rwyfh9p732qrfgp983gwfeigu</purchaseId>
+            <qty>1</qty>
+            <renewalDate i:nil="true"/>
+            <upsellProduct i:nil="true"/>
+        </product>
+        <product xmlns="">
+            <HDPosterUrl i:nil="true"/>
+            <SDPosterUrl i:nil="true"/>
+            <code>roku.amcplus.member.annual</code>
+            <cost>$83.99</cost>
+            <description/>
+            <expirationDate i:nil="true"/>
+            <freeTrialQuantity>7</freeTrialQuantity>
+            <freeTrialType>Days</freeTrialType>
+            <fulfills xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+            <inStock>true</inStock>
+            <maxQty>1</maxQty>
+            <name>Annual Subscription</name>
+            <productType>AnnualSub</productType>
+            <purchaseDate>0001-01-01T00:00:00</purchaseDate>
+            <purchaseId>98034275ryhuwdg9348yrhpfuh4398p7rwyfh9p732qrfgp983gwfeigu</purchaseId>
+            <qty>1</qty>
+            <renewalDate i:nil="true"/>
+            <upsellProduct i:nil="true"/>
+        </product>
+    </products>
+</result>

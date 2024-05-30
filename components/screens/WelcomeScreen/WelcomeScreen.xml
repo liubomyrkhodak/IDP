@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component name="welcomeScreen" extends="Group" >
+    <script type="text/brightscript" uri="WelcomeScreen.brs" />
+	 <interface>
+        <field id="buttonSelected" type="boolean" alwaysnotify="true"/>
+    </interface>
+    <children>
+        <Poster
+            id="background"
+            width="1280"
+            height="720"
+            uri="pkg:/images/roku-developers-top.jpg"/>
+         <ButtonGroup id="landingButtonGroup" iconUri="" focusedIconUri="" translation="[500,325]"/>
+    </children>
+</component>
