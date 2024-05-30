@@ -1,0 +1,28 @@
+<result xmlns="http://api.roku.com/products" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+
+    <errorCode i:nil="true" xmlns=""/>
+    <errorDetails i:nil="true" xmlns=""/>
+    <errorMessage xmlns=""/>
+    <status xmlns="">Success</status>
+    <products>
+        <product xmlns="">
+            <HDPosterUrl i:nil="true"/>
+            <SDPosterUrl i:nil="true"/>
+            <code>roku.amcplus.member.monthly</code>
+            <cost>$3.99</cost>
+            <status>Valid</status>
+            <description/>
+            <expirationDate>2017-08-01T11:00:00</expirationDate>
+            <fulfills xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+            <inStock>true</inStock>
+            <maxQty>1</maxQty>
+            <name>Monthly Subscription</name>
+            <productType>MonthlySub</productType>
+            <purchaseDate>0001-01-01T00:00:00</purchaseDate>
+            <purchaseId>98034275ryhuwdg9348yrhpfuh4398p7rwyfh9p732qrfgp983gwfeigu</purchaseId>
+            <qty>1</qty>
+            <renewalDate i:nil="true"/>
+            <upsellProduct i:nil="true"/>
+        </product>
+    </products>
+</result>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component name="StoreScreen" extends="Group" >
+    <script type="text/brightscript" uri="StoreScreen.brs" />
+	 <interface>
+        <field id="buttonSelected" type="node" onChange="" />
+    </interface>
+    <children>
+        <Poster
+            id="background"
+            width="1280"
+            height="720"
+            uri="pkg:/images/background.jpg"/>
+        <ChannelStore
+            id="store"
+            fakeServer="true" />
+        <MarkupGrid
+            id="productGrid"
+            itemComponentName="StoreProduct"
+            numRows="3"
+            itemSpacing="[0,30]"
+            itemSize="[1080, 200]"
+            translation="[100, 30]" 
+            visible="true"/>
+        <Group id="ErrorGroup" translation="[300, 240]" visible="false">
+            <Label id="errorLabel" text="Error" translation="[200, 60]"/>
+            <Label id="errorDescription" text="No Products Available" translation="[200, 100]"/>
+        </Group>
+    </children>
+</component>
