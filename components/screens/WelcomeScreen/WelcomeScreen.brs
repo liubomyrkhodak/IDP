@@ -1,6 +1,5 @@
 sub Init()
     m.landingButtonGroup = m.top.findNode("landingButtonGroup")
-    m.landingButtonGroup.SetFocus(true)
 
     Buttons = ["Continue to Products"]
     m.landingButtonGroup.buttons = Buttons
