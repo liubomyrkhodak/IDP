@@ -9,5 +9,5 @@ sub HandleError()
     dialog = CreateObject("roSGNode", "Dialog")
     dialog.title = "Error"
     dialog.message = "No Products"
-    m.top.ComponentController.callFunc("show", {view: dialog})
+    m.top.dialog = dialog
 end sub

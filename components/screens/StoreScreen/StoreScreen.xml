@@ -22,9 +22,5 @@
             itemSize="[1080, 200]"
             translation="[100, 30]" 
             visible="true"/>
-        <Group id="ErrorGroup" translation="[300, 240]" visible="false">
-            <Label id="errorLabel" text="Error" translation="[200, 60]"/>
-            <Label id="errorDescription" text="No Products Available" translation="[200, 100]"/>
-        </Group>
     </children>
 </component>

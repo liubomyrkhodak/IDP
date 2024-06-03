@@ -11,6 +11,6 @@
             width="1280"
             height="720"
             uri="pkg:/images/roku-developers-top.jpg"/>
-         <ButtonGroup id="landingButtonGroup" iconUri="" focusedIconUri="" translation="[500,325]"/>
+        <ButtonGroup id="landingButtonGroup" iconUri="" focusedIconUri="" translation="[500,325]"/>
     </children>
 </component>

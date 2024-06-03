@@ -3,7 +3,11 @@ sub Init()
     m.store.ObserveField("catalog", "onGetCatalog")
     m.productGrid = m.top.findNode("productGrid")
     m.store.command = "GetCatalog"
-    m.productGrid.setFocus(true)
+    m.top.ObserveField("focusedChild", "OnFocusChange")
+end sub
+
+sub OnFocusChange()
+    if m.top.HasFocus() then m.productGrid.SetFocus(true)
 end sub
 
 sub onGetCatalog()
