@@ -5,6 +5,7 @@
     <script type="text/brightscript" uri="WelcomeScreenLogic.brs" />
     <script type="text/brightscript" uri="StoreScreenLogic.brs" />
     <script type="text/brightscript" uri="DeepLinkingLogic.brs" />
+    <script type="text/brightscript" uri="StoreLogic.brs" />
     <script type="text/brightscript" uri="../source/rsg_utils.brs" />
      <interface>
         <field id="response" type="assocarray" />
@@ -12,4 +13,6 @@
         <field id="event" type="string" />
         <function name="HandleError" />
     </interface>
+    <children>
+    </children>
 </component>

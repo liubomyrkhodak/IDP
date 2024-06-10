@@ -2,6 +2,7 @@
 
 <component name="StoreScreen" extends="Group" >
     <script type="text/brightscript" uri="StoreScreen.brs" />
+    <script type="text/brightscript" uri="pkg:/components/StoreLogic.brs" />
 	 <interface>
         <field id="buttonSelected" type="node" onChange="" />
     </interface>
@@ -11,9 +12,6 @@
             width="1280"
             height="720"
             uri="pkg:/images/background.jpg"/>
-        <ChannelStore
-            id="store"
-            fakeServer="true" />
         <MarkupGrid
             id="productGrid"
             itemComponentName="StoreProduct"
